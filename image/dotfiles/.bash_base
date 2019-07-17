@@ -1,0 +1,4 @@
+#!/bin/bash
+[[ -s ~/.bash_aliases ]] && source ~/.bash_aliases
+[[ -s ~/.bash_colours ]] && source ~/.bash_colours
+[[ -s ~/.bash_paths ]] && source ~/.bash_paths

@@ -1,0 +1,35 @@
+#!/bin/bash
+
+# #####################################################################
+# # 														            #
+# # 						HANDLE PATH VARIABLES 			            #
+# #														            #
+# #####################################################################
+#
+# # ===== MacOS =====
+# # # Set JAVA_HOME
+# # JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home
+# # export JAVA_HOME
+#
+# # # Set M3_HOME
+# # M3_HOME=/d/Apache/apache-maven-3.5.3
+# # export M3_HOME
+#
+# # # Set ANACONDA_HOME
+# # ANACONDA_HOME=/Volumes/Internal-Workspace/dev-tools/anaconda
+# # export ANACONDA_HOME
+#
+# # Set node directory
+# #NPM_HOME=~/configs/.npm
+# #export NPM_HOME
+#
+# # # Add variables to PATH
+# #PATH=$NPM_HOME/bin:$PATH:$JAVA_HOME/bin:$M3_HOME/bin:$ANACONDA_HOME/bin
+# #export PATH
+# # ===== /MacOS =====
+#
+
+
+
+
+# echo 'bash_paths sourced successfully'
