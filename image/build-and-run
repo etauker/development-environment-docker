@@ -1,0 +1,12 @@
+#!/bin/bash
+
+CONTAINER_NAME="development-environment"
+IMAGE_NAME="alpine:latest"
+HOST_PORT="9999"
+
+docker stop $CONTAINER_NAME
+docker build -t $IMAGE_NAME --build-arg MESSAGE="Message from build script" .
+docker run -d --name $CONTAINER_NAME $IMAGE_NAME #--rm -p $HOST_PORT:80 --name $CONTAINER_NAME $IMAG$
+# echo "Listening to localhost:$HOST_PORT, try http://localhost:$HOST_PORT"
+
+echo "Build and run complete."
