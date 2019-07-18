@@ -1,15 +1,24 @@
 #!/bin/bash
+#
+# CONTAINER_NAME="development-environment"
+IMAGE_NAME="cinnamon"
+IMAGE_TAG="latest"
+# HOST_PORT="9999"
+#
+# docker build -t $IMAGE_NAME --build-arg MESSAGE="Message from build script" --no-cache .
+# docker run -d --rm -p $HOST_PORT:80 --name $CONTAINER_NAME $IMAGE_NAME
+# # echo "Listening to localhost:$HOST_PORT, try http://localhost:$HOST_PORT"
 
-CONTAINER_NAME="development-environment"
-IMAGE_NAME="ubuntu:latest"
-HOST_PORT="9999"
+# Preparation before building the image
+#mkdir ./temp
+#cat ~/.ssh/id_rsa.pub > ./temp/id_rsa.pub
 
-docker stop $CONTAINER_NAME
-mkdir ./temp
-cat ~/.ssh/id_rsa.pub > ./temp/id_rsa.pub
-docker build -t $IMAGE_NAME --build-arg MESSAGE="Message from build script" --no-cache .
-docker run -d --rm -p $HOST_PORT:80 --name $CONTAINER_NAME $IMAGE_NAME
-rm -Rf ./temp
-# echo "Listening to localhost:$HOST_PORT, try http://localhost:$HOST_PORT"
+# Build the image
+# docker build --no-cache -t $IMAGE_NAME .
+docker build -t $IMAGE_NAME .
 
-echo "Build and run complete."
+# Cleanup after build
+#rm -Rf ./temp
+
+# Run the image
+bash scripts/start-$IMAGE_NAME

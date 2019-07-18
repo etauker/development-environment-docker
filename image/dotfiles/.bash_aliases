@@ -11,12 +11,12 @@
 # alias devi='node setup.js --install'
 # alias devc='node setup.js --configure'
 # alias devb='node setup.js --backup'
-alias update='source ~/.bashrc'
+alias update='source ~/.bash_base'
 # ===== /Shared =====
 
 # ===== Linux =====
-alias chromium='chromium-browser &>/dev/null &'
-alias ws='cd ~/workspace'
+# alias chromium='chromium-browser &>/dev/null &'
+alias ws='cd ~/projects'
 # ===== /Linux =====
 
 # ===== Windows =====

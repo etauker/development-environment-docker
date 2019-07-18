@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# sudo mv --force /home/etauker/* /fakehome/etauker/
+
+# TODO: automate
+mv /home/temp/dotfiles/.bash_aliases /fakehome/etauker/
+mv /home/temp/dotfiles/.bash_base /fakehome/etauker/
+mv /home/temp/dotfiles/.bash_colours /fakehome/etauker/
+mv /home/temp/dotfiles/.bash_nvm /fakehome/etauker/
+mv /home/temp/dotfiles/.bash_paths /fakehome/etauker/
+mv /home/temp/dotfiles/.bash_profile /fakehome/etauker/
+mv /home/temp/dotfiles/.bashrc /fakehome/etauker/
+mv /home/temp/dotfiles/.gitconfig /fakehome/etauker/
+
+exec "$@"
