@@ -1,2 +1,2 @@
 #!/bin/bash
-x11docker --desktop --gpu --sudouser --pull=yes --init=systemd cinnamon
+x11docker --desktop --fullscreen --gpu --sudouser --user=RETAIN --pull=yes --init=systemd cinnamon

@@ -127,3 +127,4 @@
 #     done
 # fi
 # ===== /Shared =====
+echo '[bashrc] sourced successfully'

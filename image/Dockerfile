@@ -81,33 +81,23 @@
 
 
 FROM x11docker/cinnamon
+RUN echo "Hello me"
 
+# Copy start script
 COPY internal-scripts/start /usr/local/bin/start
 RUN chmod +x /usr/local/bin/start
 
-
-
-# Set up user
-#RUN adduser --disabled-password --gecos "" startup
-#RUN adduser --disabled-password --gecos "" etauker
-#RUN usermod -d /home/etauker/ etauker
-#RUN su startup
-#RUN sudo chown etauker /home/etauker
-
-
-
-# Install basic tools
-RUN apt-get -y install git nano curl
+# Install cli tools
+RUN apt-get -y install git nano
 RUN echo [git] installed: $(git --version)
 
+# Install GUI tools
+RUN apt-get -y install dconf-editor
 
-# Copy over dotfiles
-RUN mkdir -p /home/temp
-RUN mkdir -p /fakehome/projects
-COPY internal-scripts/copy-dotfiles /home/temp/scripts/dotfiles
-COPY dotfiles/* /home/temp/dotfiles/
+# Setup files and folders
+RUN mkdir -p /root/projects
+COPY dotfiles/* /root/
 
-RUN cat /usr/local/bin/start
-
+# Start files
 ENTRYPOINT ["/usr/local/bin/start"]
 CMD ["cinnamon-session"]

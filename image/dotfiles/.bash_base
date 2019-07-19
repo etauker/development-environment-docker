@@ -1,4 +1,7 @@
 #!/bin/bash
+
 [[ -s ~/.bash_aliases ]] && source ~/.bash_aliases
-[[ -s ~/.bash_colours ]] && source ~/.bash_colours
+[[ -s ~/.bash_customizations ]] && source ~/.bash_customizations
 [[ -s ~/.bash_paths ]] && source ~/.bash_paths
+
+echo '[bash_base] sourced successfully'

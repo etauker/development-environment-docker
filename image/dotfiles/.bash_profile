@@ -126,3 +126,5 @@
 #     done
 # fi
 # ===== /Shared =====
+
+echo '[bash_profile] sourced successfully'

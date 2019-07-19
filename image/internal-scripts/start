@@ -4,4 +4,5 @@
   dconf write /org/cinnamon/desktop/background/picture-uri \"file:///usr/share/backgrounds/gnome/Sandstone.jpg\"
 }
 
+gnome-terminal
 exec "$@"

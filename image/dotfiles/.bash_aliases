@@ -12,6 +12,7 @@
 # alias devc='node setup.js --configure'
 # alias devb='node setup.js --backup'
 alias update='source ~/.bash_base'
+alias lts='gsettings list-recursively | grep gnome.Terminal' # list terminal settings
 # ===== /Shared =====
 
 # ===== Linux =====
@@ -29,4 +30,4 @@ alias ws='cd ~/projects'
 # alias ws='cd /Volumes/Internal-Workspace/projects'
 # ===== /MacOS =====
 
-echo 'bash_aliases sourced successfully'
+echo '[bash_aliases] sourced successfully'

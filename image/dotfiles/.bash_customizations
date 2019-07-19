@@ -2,11 +2,16 @@
 
 #####################################################################
 #                                                                   #
-#                       CUSTOMISE SHELL COLOURS                     #
+#                       CUSTOMISE TERMINAL                          #
 #                                                                   #
 #####################################################################
 
-# ===== Shared =====
+
+# Terminal settings
+gsettings set org.gnome.Terminal.Legacy.Settings theme-variant dark
+
+
+
 export CLICOLOR=1
 export LSCOLORS=fxbxxxxxxxxxxxxxxxfxfx
 
@@ -135,6 +140,4 @@ export PS2="\[$(tput bold)\]\[\033[38;5;7m\]>\[$(tput sgr0)\]"
 #105 = light purple background
 #106 = turquoise background
 
-# ===== /Shared =====
-
-echo 'bash_colours sourced successfully'
+echo '[bash_customizations] sourced successfully'
