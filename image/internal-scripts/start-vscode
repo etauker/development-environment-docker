@@ -1,0 +1,8 @@
+#! /bin/sh
+
+[ -e \$HOME/.cinnamon ] || {
+  dconf write /org/cinnamon/desktop/background/picture-uri \"file:///usr/share/backgrounds/gnome/Sandstone.jpg\"
+}
+
+code /home/vscode --user-data-dir=/home/vscode
+exec "$@"

@@ -1,0 +1,2 @@
+#!/bin/bash
+x11docker --clipboard --gpu --sudouser --user=RETAIN --pull=yes --init=systemd cinnamon

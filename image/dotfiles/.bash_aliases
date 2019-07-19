@@ -13,6 +13,7 @@
 # alias devb='node setup.js --backup'
 alias update='source ~/.bash_base'
 alias lts='gsettings list-recursively | grep gnome.Terminal' # list terminal settings
+alias off="poweroff"
 # ===== /Shared =====
 
 # ===== Linux =====
@@ -29,5 +30,16 @@ alias ws='cd ~/projects'
 # alias atom='/Applications/Atom.app/Contents/Resources/app/atom.sh'
 # alias ws='cd /Volumes/Internal-Workspace/projects'
 # ===== /MacOS =====
+
+
+poweroff() {
+  if [[ "$*" == "-f" ]]
+  then
+      shutdown --poweroff now
+  else
+      shutdown --poweroff
+  fi
+}
+
 
 echo '[bash_aliases] sourced successfully'

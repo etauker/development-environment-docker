@@ -3,6 +3,10 @@
 # CONTAINER_NAME="development-environment"
 IMAGE_NAME="cinnamon"
 IMAGE_TAG="latest"
+COMMAND=${1:-vscode}
+# "cinnamon" or "vscode"
+
+
 # HOST_PORT="9999"
 #
 # docker build -t $IMAGE_NAME --build-arg MESSAGE="Message from build script" --no-cache .
@@ -15,10 +19,10 @@ IMAGE_TAG="latest"
 
 # Build the image
 # docker build --no-cache -t $IMAGE_NAME .
-docker build -t $IMAGE_NAME .
+docker build -t $IMAGE_NAME --build-arg COMMAND=$COMMAND .
 
 # Cleanup after build
 #rm -Rf ./temp
 
 # Run the image
-bash scripts/start-$IMAGE_NAME
+bash scripts/start-$COMMAND

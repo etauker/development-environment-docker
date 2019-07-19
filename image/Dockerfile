@@ -81,22 +81,35 @@
 
 
 FROM x11docker/cinnamon
+ARG COMMAND
 RUN echo "Hello me"
 
 # Copy start script
-COPY internal-scripts/start /usr/local/bin/start
+COPY internal-scripts/start-$COMMAND /usr/local/bin/start
 RUN chmod +x /usr/local/bin/start
 
 # Install cli tools
-RUN apt-get -y install git nano
+RUN apt-get -y install git nano curl gpg
 RUN echo [git] installed: $(git --version)
 
 # Install GUI tools
 RUN apt-get -y install dconf-editor
 
+# Install vscode
+COPY source-lists/vscode.list /etc/apt/sources.list.d/vscode.list
+RUN curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
+RUN mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
+RUN apt-get -y update
+RUN apt-get -y install code
+
 # Setup files and folders
+RUN echo "Hello"
 RUN mkdir -p /root/projects
 COPY dotfiles/* /root/
+
+# Configure vscode
+RUN mkdir -p /home/vscode
+COPY vscode-settings/User/settings.json /home/vscode/User/settings.json
 
 # Start files
 ENTRYPOINT ["/usr/local/bin/start"]
