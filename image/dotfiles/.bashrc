@@ -119,12 +119,5 @@
 # ===== Shared =====
 [[ -s ~/.bash_base ]] && source ~/.bash_base
 
-
-# # Assign code completion if the file exists
-# if [ -e /etc/bash_completion.d ]; then
-#     for file in /etc/bash_completion.d/* ; do
-#         source "$file"
-#     done
-# fi
 # ===== /Shared =====
-echo '[bashrc] sourced successfully'
+echo '(OK) bashrc sourced successfully'

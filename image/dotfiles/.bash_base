@@ -4,4 +4,11 @@
 [[ -s ~/.bash_customizations ]] && source ~/.bash_customizations
 [[ -s ~/.bash_paths ]] && source ~/.bash_paths
 
-echo '[bash_base] sourced successfully'
+# Assign code completion if the file exists
+# if [ -e /etc/bash_completion.d ]; then
+#     for file in /etc/bash_completion.d/* ; do
+#         source "$file"
+#     done
+# fi
+
+echo '(OK) bash base sourced successfully'

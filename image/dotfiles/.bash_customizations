@@ -140,4 +140,4 @@ export PS2="\[$(tput bold)\]\[\033[38;5;7m\]>\[$(tput sgr0)\]"
 #105 = light purple background
 #106 = turquoise background
 
-echo '[bash_customizations] sourced successfully'
+echo '(OK) bash customizations sourced successfully'

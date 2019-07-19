@@ -3,7 +3,7 @@
 # CONTAINER_NAME="development-environment"
 IMAGE_NAME="cinnamon"
 IMAGE_TAG="latest"
-COMMAND=${1:-vscode}
+COMMAND=${1:-cinnamon}
 # "cinnamon" or "vscode"
 
 

@@ -32,4 +32,4 @@
 
 
 
-# echo '[bash_paths] sourced successfully'
+echo '(OK) bash paths sourced successfully'

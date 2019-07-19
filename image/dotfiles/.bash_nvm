@@ -5,4 +5,6 @@ echo "NVM_DIR: $NVM_DIR"
 [[ -s "$NVM_DIR/bash_completion" ]] && source "$NVM_DIR/bash_completion"
 nvm ls-remote
 nvm install v10.16.0
-echo '[bash_nvm] sourced successfully'
+
+
+echo '(OK) bash nvm sourced successfully'
