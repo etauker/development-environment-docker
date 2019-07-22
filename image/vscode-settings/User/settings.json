@@ -1,10 +1,13 @@
 {
   "workbench.colorTheme": "Atom One Dark",
   "editor.suggestSelection": "first",
+  "editor.tabCompletion": "onlySnippets",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "explorer.autoReveal": false,
   "search.showLineNumbers": true,
+  "debug.openDebug": "openOnDebugBreak",
   "debug.allowBreakpointsEverywhere": true,
+  "window.restoreWindows": "all",
   "workbench.settings.editor": "json",
   "workbench.sideBar.location": "right",
   "workspaceExplorer.workspaceStorageDirectory": "/root/projects",
@@ -13,5 +16,7 @@
   "workbench.tree.indent": 20,
   "window.zoomLevel": 0,
   "window.restoreFullscreen": true,
-  "window.newWindowDimensions": "fullscreen"
+  "window.newWindowDimensions": "fullscreen",
+  "editor.minimap.maxColumn": 40,
+  "editor.minimap.renderCharacters": false
 }
